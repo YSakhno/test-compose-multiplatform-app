@@ -1,0 +1,26 @@
+#
+# This file declares the default version catalog (for more information on Gradle's version catalogs, see
+# https://docs.gradle.org/9.2.1/userguide/platforms.html#sub::toml-dependencies-format).
+#
+# NOTE: The declarations in each of the 4 major sections are ordered alphabetically. Please maintain this sorting order
+# when inserting new declarations.
+#
+
+[versions]
+junit-jupiter-engine = "5.12.1"
+compose-hotReload = "1.0.0"
+compose-multiplatform = "1.9.3"
+kotlin = "2.3.0"
+kotlinx-coroutines = "1.10.2"
+
+[libraries]
+junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit-jupiter-engine" }
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+kotlin-testJunit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
+kotlinx-coroutines-swing = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-swing", version.ref = "kotlinx-coroutines" }
+
+[plugins]
+compose-hotReload = { id = "org.jetbrains.compose.hot-reload", version.ref = "compose-hotReload" }
+compose-multiplatform = { id = "org.jetbrains.compose", version.ref = "compose-multiplatform" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
