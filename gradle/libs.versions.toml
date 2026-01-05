@@ -7,9 +7,10 @@
 #
 
 [versions]
-junit-jupiter-engine = "5.12.1"
 compose-hotReload = "1.0.0"
 compose-multiplatform = "1.9.3"
+javaLanguageCompatibility = "21"
+junit-jupiter-engine = "5.12.1"
 kotlin = "2.3.0"
 kotlinx-coroutines = "1.10.2"
 
@@ -20,7 +21,7 @@ kotlin-testJunit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.
 kotlinx-coroutines-swing = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-swing", version.ref = "kotlinx-coroutines" }
 
 [plugins]
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 compose-hotReload = { id = "org.jetbrains.compose.hot-reload", version.ref = "compose-hotReload" }
 compose-multiplatform = { id = "org.jetbrains.compose", version.ref = "compose-multiplatform" }
-compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
