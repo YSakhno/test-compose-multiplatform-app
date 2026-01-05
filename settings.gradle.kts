@@ -1,6 +1,7 @@
 pluginManagement {
     repositories {
         google {
+            @Suppress("UnstableApiUsage") // includeGroupAndSubgroups is 'incubating' in Gradle 9.2.1
             mavenContent {
                 includeGroupAndSubgroups("androidx")
                 includeGroupAndSubgroups("com.android")
@@ -12,6 +13,7 @@ pluginManagement {
     }
 }
 
+@Suppress("UnstableApiUsage") // repositories and repositoriesMode are 'incubating' in Gradle 9.2.1
 dependencyResolutionManagement {
     repositories {
         google {
