@@ -1,4 +1,4 @@
-import org.gradle.jvm.toolchain.JvmVendorSpec
+import org.gradle.jvm.toolchain.JvmVendorSpec.JETBRAINS
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 
@@ -12,7 +12,8 @@ plugins {
 java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(25)
-        vendor = JvmVendorSpec.JETBRAINS
+        @Suppress("UnstableApiUsage")
+        vendor = JETBRAINS
     }
 }
 
